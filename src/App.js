@@ -1,13 +1,23 @@
+import React from "react";
+import { useRecoilValue } from "recoil";
+
+import CardList from "./components/card_list";
+import HandleCardList from "./components/handle_card_list";
+
+import { CardDataStore, handleCardDataStore } from "./store";
+  
 import "./App.css";
 
-import Card from "./components/card";
+const App = () => {
+    const card = useRecoilValue(CardDataStore);
+    const handleCard = useRecoilValue(handleCardDataStore);
 
-function App() {
     return (
         <div className="App">
-            <Card />
+            <CardList cardData={card} />
+            <HandleCardList cardData={handleCard} />
         </div>
     );
-}
+};
 
 export default App;
