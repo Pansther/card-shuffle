@@ -36,6 +36,6 @@ export const CardContainer = styled.div`
     }
 
     :active {
-        transform: scale(1);
+        transform: scale(1.05);
     }
 `;

@@ -10,7 +10,7 @@ export const HandleCardListContainer = styled.div`
 
     .card-list-box {
         display: flex;
-        min-width: 10%;
+        min-width: 200px;
         min-height: 220px;
         flex-direction: row;
         flex-wrap: wrap;
@@ -23,6 +23,7 @@ export const HandleCardListContainer = styled.div`
     }
 
     .button-box {
+        display: flex;
         margin: 10px auto;
 
         button {
@@ -33,11 +34,12 @@ export const HandleCardListContainer = styled.div`
             align-items: center;
             padding-top: 5px;
             border-radius: 5px;
+            margin: 0 10px;
         }
 
         i {
             margin-right: 10px;
-            margin-top: -5px;
+            margin-top: -3px;
             margin-left: -2px;
         }
     }
