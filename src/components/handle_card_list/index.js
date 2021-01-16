@@ -27,8 +27,8 @@ const HandleCardList = (props) => {
     }
 
     function onShuffle() {
-        const newHandle = _.shuffle(handleCard);
-        setHandleCard(newHandle);
+        if (handleCard.length > 1) 
+            setHandleCard(_.shuffle(handleCard));
     }
 
     return (
