@@ -14,6 +14,11 @@ const CardList = (props) => {
     const [cardList, setCardList] = useRecoilState(CardDataStore);
     const [handleCard, setHandleCard] = useRecoilState(handleCardDataStore);
 
+    React.useEffect(() => {
+        setCardList(_.sortBy(cardData, ["id"]));
+        // eslint-disable-next-line
+    }, []);
+
     function pickupCard(pickedCard) {
         const newCardList = _.filter(cardList, (card) => {
             if (card.id !== pickedCard.id) {

@@ -11,7 +11,7 @@ import "./App.css";
 const App = () => {
     const card = useRecoilValue(CardDataStore);
     const handleCard = useRecoilValue(handleCardDataStore);
-
+  
     return (
         <div className="App">
             <CardList cardData={card} />
