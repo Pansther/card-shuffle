@@ -14,9 +14,13 @@ const CardBoard = () => {
     const [handleCard, setHandleCard] = useRecoilState(handleCardDataStore);
 
     function onRandom() {
-        const randomList = [];
+        const randomList = []; 
         for (let i = 0; i < 5 - handleCard.length; i++) {
-            const random = _.random(1, 9, false);
+            const random = _.random(
+                _.take(card)[0].digit,
+                _.takeRight(card)[0].digit,
+                false
+            );
             randomList.push(random);
         }
 
