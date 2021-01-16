@@ -1,6 +1,7 @@
 import React from "react";
 import _ from "lodash";
 import { useSetRecoilState, useRecoilState } from "recoil";
+import { Button } from "antd";
 
 import Card from "../card";
 
@@ -35,6 +36,7 @@ const HandleCardList = (props) => {
             <div className="card-list-box">
                 {cardData?.map((card) => (
                     <Card
+                        className="card"
                         key={card.id}
                         digit={card.digit}
                         onClick={() => dropCard(card)}
@@ -43,7 +45,13 @@ const HandleCardList = (props) => {
             </div>
 
             <div className="button-box">
-                <button onClick={onShuffle}>Shuffle</button>
+                <Button
+                    type="default"
+                    icon={<i className="fas fa-dice"></i>}
+                    onClick={onShuffle}
+                >
+                    SHUFFLE
+                </Button>
             </div>
         </HandleCardListContainer>
     );

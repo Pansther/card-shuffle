@@ -4,16 +4,34 @@ export const HandleCardListContainer = styled.div`
     display: flex;
     width: 100%;
     flex-direction: column;
-    flex-wrap: wrap;
+    position: fixed;
+    bottom: 10px;
+    align-items: center;
 
     .card-list-box {
         display: flex;
-        width: 100%;
+        min-width: 10%;
+        min-height: 180px;
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: center;
+        border: 1px solid gray;
+        box-shadow: 2px 2px 4px #DDDDDD;
+        border-radius: 10px;
+        padding: 20px 30px;
+        margin-bottom: 10px;
     }
 
     .button-box {
-        margin: 10px; 
+        margin: 10px auto;
+
+        button {
+            /* margin: 10px; */
+        }
+
+        i {
+            margin-right: 10px;
+            margin-top: 5px; 
+        }
     }
 `;

@@ -8,11 +8,22 @@ export const CardContainer = styled.div`
     border-radius: 5px;
     justify-content: center;
     align-items: center;
-    margin: 10px;
+    margin: 10px; 
+    user-select: none;
+
+    :hover {
+        cursor: pointer;
+    }
 
     .digit-box {
+        display: flex;
+        /* background-color: red; */
+        align-items: center; 
+
         p {
             font-size: 3rem;
+            padding: 0;
+            margin: 0;
         }
     }
 `;

@@ -1,20 +1,21 @@
 import React from "react";
 import { useRecoilValue } from "recoil";
-
-import CardList from "./components/card_list";
+ 
+import CardBoard from './components/card_board'
 import HandleCardList from "./components/handle_card_list";
 
-import { CardDataStore, handleCardDataStore } from "./store";
+import { handleCardDataStore } from "./store";
+
+import "antd/dist/antd.css";
   
 import "./App.css";
 
-const App = () => {
-    const card = useRecoilValue(CardDataStore);
+const App = () => { 
     const handleCard = useRecoilValue(handleCardDataStore);
   
     return (
-        <div className="App">
-            <CardList cardData={card} />
+        <div className="App"> 
+            <CardBoard />
             <HandleCardList cardData={handleCard} />
         </div>
     );
