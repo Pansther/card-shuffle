@@ -15,8 +15,8 @@ export const HandleCardListContainer = styled.div`
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        border: 1px solid gray;
-        box-shadow: 2px 2px 4px #dddddd;
+        border: 1px solid #BBBBBB;
+        box-shadow: 2px 2px 4px #DDDDDD;
         border-radius: 10px;
         padding: 20px 30px;
         margin-bottom: 10px; 

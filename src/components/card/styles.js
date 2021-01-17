@@ -4,12 +4,12 @@ export const CardContainer = styled.div`
     display: flex;
     width: 110px;
     height: 150px;
-    border: 1px solid black;
+    border: 1px solid #BBBBBB;
     border-radius: 5px;
     justify-content: center;
     align-items: center;
     margin: 10px;
-    box-shadow: 2px 2px 4px #dddddd;
+    box-shadow: 2px 2px 4px #DDDDDD;
     
     user-select: none;
 

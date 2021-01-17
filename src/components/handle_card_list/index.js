@@ -25,7 +25,7 @@ const HandleCardList = (props) => {
         }, 400);
         setTimeout(() => {
             setFlip(false);
-        }, 500);
+        }, 600);
     }
 
     function dropCard(droppedCard) {
@@ -50,8 +50,11 @@ const HandleCardList = (props) => {
     }
 
     function onDropAll() {
-        setHandleCard([]);
-        resetCardList();
+        // setHandleCard([]);
+        flipCard([]);
+        setTimeout(() => {
+            resetCardList();
+        }, 600);
     }
  
     return (
