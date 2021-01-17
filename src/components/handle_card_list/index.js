@@ -56,7 +56,7 @@ const HandleCardList = (props) => {
             resetCardList();
         }, 600);
     }
- 
+
     return (
         <HandleCardListContainer>
             <div className="card-list-box">
@@ -65,8 +65,8 @@ const HandleCardList = (props) => {
                         className="card"
                         key={card.id}
                         isFlipped={isFlipped}
-                        digit={card.digit}
                         onClick={() => dropCard(card)}
+                        {...card}
                     />
                 ))}
             </div>

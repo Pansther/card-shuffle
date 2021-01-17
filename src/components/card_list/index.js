@@ -37,8 +37,8 @@ const CardList = (props) => {
             {cardData?.map((card) => (
                 <Card
                     key={card.id}
-                    digit={card.digit}
                     onClick={() => pickupCard(card)}
+                    {...card}
                 />
             ))}
         </CardListContainer>
