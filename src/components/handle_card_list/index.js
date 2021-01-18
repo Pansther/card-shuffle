@@ -8,7 +8,7 @@ import Card from "../card";
 import { CardDataStore, handleCardDataStore } from "../../store";
 
 import { HandleCardListContainer } from "./styles";
-
+ 
 const HandleCardList = (props) => {
     const { cardData = [] } = props;
 

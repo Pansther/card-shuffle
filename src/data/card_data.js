@@ -1,47 +1,49 @@
+import { color } from './color_data'
+
 export const cardData = [
     {
         id: 1,
         digit: 1,
-        color: "mediumorchid",
+        color: color[1].color,
     },
     {
         id: 2,
         digit: 2,
-        color: "royalblue",
+        color: color[2].color,
     },
     {
         id: 3,
         digit: 3,
-        color: "deepskyblue",
+        color: color[3].color,
     },
     {
         id: 4,
         digit: 4,
-        color: "limegreen",
+        color: color[4].color,
     },
     {
         id: 5,
         digit: 5,
-        color: "gold",
+        color: color[5].color,
     },
     {
         id: 6,
         digit: 6,
-        color: "orange",
+        color: color[6].color,
     },
     {
         id: 7,
         digit: 7,
-        color: "tomato",
+        color: color[7].color,
     },
     {
         id: 8,
         digit: 8,
-        color: "hotpink",
+        color: color[7].color,
     },
     {
         id: 9,
         digit: 9,
-        color: "saddlebrown",
+        color: color[9].color,
     },
 ];

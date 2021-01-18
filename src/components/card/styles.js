@@ -31,7 +31,9 @@ export const CardContainer = styled.div`
 
     .back-box {
         display: flex;
-        background-color: lightgray;
+        flex-direction: column;
+        flex-wrap: wrap;
+        background-color: pink;
         color: white;
         width: 80%;
         height: 85%;
@@ -39,8 +41,12 @@ export const CardContainer = styled.div`
         border-radius: 5px;
         justify-content: center;
 
-        p {
-            font-size: 2rem;
+        .back-circle {
+            background: white;
+            width: 40px;
+            height: 40px;
+            border: 1px solid #bbbbbb;
+            border-radius: 100%;
         }
     }
 

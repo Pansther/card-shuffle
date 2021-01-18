@@ -9,12 +9,16 @@ import { CardDataStore, handleCardDataStore } from "../../store";
 
 import { CardBoardContainer } from "./styles";
 
+import { color } from "../../data/color_data";
+
 const CardBoard = () => {
     const [card, setCard] = useRecoilState(CardDataStore);
     const [handleCard, setHandleCard] = useRecoilState(handleCardDataStore);
 
+    const [count, setCount] = React.useState(_.random(0, 9));
+
     function onRandom() {
-        const randomList = []; 
+        const randomList = [];
         for (let i = 0; i < 5 - handleCard.length; i++) {
             const random = _.random(
                 _.take(card)[0].digit,
@@ -36,10 +40,18 @@ const CardBoard = () => {
         setCard(newCardList);
     }
 
+    function onClickHeader() {
+        if (count < 9) setCount(count + 1);
+        else setCount(1);
+    }
+ 
     return (
         <CardBoardContainer>
-            <div className="card-board-header">
-                <p>Cards Shuffle</p>
+            <div className="card-board-header" onClick={onClickHeader}>
+                <p>
+                    <span style={{ color: color[count].color }}>Cards </span>
+                    Shuffle
+                </p>
             </div>
 
             <CardList cardData={card} />

@@ -16,7 +16,7 @@ const Card = (props) => {
 
             <CardContainer onClick={props.onClick}>
                 <div className="digit-box back-box">
-                    <p>xxxx</p>
+                    <div className="back-circle"></div>
                 </div>
             </CardContainer>
         </ReactCardFlip>
