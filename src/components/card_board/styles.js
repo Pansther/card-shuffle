@@ -8,7 +8,7 @@ export const CardBoardContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+
     user-select: none;
 
     .card-board-header {
@@ -35,7 +35,8 @@ export const CardBoardContainer = styled.div`
         }
 
         p:active {
-            transform: scale(1.1);
+            transform: scale(1.07);
+            transition: none;
         }
 
         @keyframes swingHorizontal {
@@ -43,7 +44,7 @@ export const CardBoardContainer = styled.div`
                 transform: scale(1);
             }
             15% {
-                transform: translateX(5px); 
+                transform: translateX(5px);
             }
             30% {
                 transform: translateX(-5px);
@@ -64,7 +65,7 @@ export const CardBoardContainer = styled.div`
                 transform: scale(1.1);
             }
         }
-        
+
         p {
             span {
                 transition: color 200ms;

@@ -39,7 +39,7 @@ export const cardData = [
     {
         id: 8,
         digit: 8,
-        color: color[7].color,
+        color: color[8].color,
     },
     {
         id: 9,

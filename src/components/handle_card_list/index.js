@@ -1,5 +1,5 @@
 import React from "react";
-import _ from "lodash";
+import _ from "lodash"; 
 import { useSetRecoilState, useRecoilState, useResetRecoilState } from "recoil";
 import { Button } from "antd";
 
@@ -8,7 +8,7 @@ import Card from "../card";
 import { CardDataStore, handleCardDataStore } from "../../store";
 
 import { HandleCardListContainer } from "./styles";
- 
+
 const HandleCardList = (props) => {
     const { cardData = [] } = props;
 
@@ -50,7 +50,6 @@ const HandleCardList = (props) => {
     }
 
     function onDropAll() {
-        // setHandleCard([]);
         flipCard([]);
         setTimeout(() => {
             resetCardList();

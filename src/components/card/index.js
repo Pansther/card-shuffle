@@ -14,7 +14,7 @@ const Card = (props) => {
                 </div>
             </CardContainer>
 
-            <CardContainer onClick={props.onClick}>
+            <CardContainer>
                 <div className="digit-box back-box">
                     <div className="back-circle"></div>
                 </div>

@@ -16,6 +16,8 @@ const CardBoard = () => {
     const [handleCard, setHandleCard] = useRecoilState(handleCardDataStore);
 
     const [count, setCount] = React.useState(_.random(0, 9));
+    const word1 = React.useRef(null);
+    const word2 = React.useRef(null);
 
     function onRandom() {
         const randomList = [];
@@ -41,16 +43,50 @@ const CardBoard = () => {
     }
 
     function onClickHeader() {
-        if (count < 9) setCount(count + 1);
-        else setCount(1);
+        const currentColor = handleCard[0]?.color;
+        if (
+            currentColor !== word1.current?.style?.color ||
+            currentColor !== word2.current?.style?.color
+        ) {
+            if (count < 9) setCount(count + 1);
+            else setCount(1);
+        }
     }
- 
+
+    function checkEasterEgg() {
+        if (handleCard.length === 1) {
+            const currentColor = handleCard[0]?.color;
+            if (currentColor === word1.current?.style?.color) {
+                const body = document.getElementsByTagName("BODY")[0];
+                body.style.background = `${currentColor}`;
+                setTimeout(() => {
+                    alert(
+                        `Easter egg founded!\nI love ${currentColor.toUpperCase()}`
+                    );
+                }, 4000);
+            }
+        }
+    }
+
+    React.useLayoutEffect(() => {
+        if (word1.current?.style?.color === word2.current?.style?.color)
+            checkEasterEgg();
+        // eslint-disable-next-line
+    }, [word1.current?.style?.color]);
+
     return (
         <CardBoardContainer>
             <div className="card-board-header" onClick={onClickHeader}>
                 <p>
-                    <span style={{ color: color[count].color }}>Cards </span>
-                    Shuffle
+                    <span ref={word1} style={{ color: color[count].color }}>
+                        Cards{" "}
+                    </span>
+                    <span
+                        ref={word2}
+                        style={{ color: color[_.random(1, 9)].color }}
+                    >
+                        Shuffle
+                    </span>
                 </p>
             </div>
 
